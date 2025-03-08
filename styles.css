@@ -7,7 +7,7 @@
 .introduction
 {
     font-size: 18px;
-    color: rgb(219, 193, 134);
+    color: rgb(193, 168, 112);
     padding: 20px;
 }
 
@@ -45,7 +45,7 @@ body
 
 h1
 {
-    color: rgb(219, 193, 134);
+    color: rgb(146, 129, 89);
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 45px;
@@ -53,28 +53,33 @@ h1
 
 h2
 {
-    color: rgb(176, 155, 106);
+    color: rgb(146, 129, 89);
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
 }
 
 p
 {
-    color: rgb(176, 155, 106);
+    color: rgb(146, 129, 89);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 label
 {
-    color: rgb(176, 155, 106);
+    color: rgb(146, 129, 89);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 button
 {
     background-color:rgb(252, 230, 180);
-    color: rgb(176, 155, 106);
+    color: rgb(146, 129, 89);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 input
 {
     background-color:rgb(252, 230, 180);
+    font-family: Arial, Helvetica, sans-serif;
 }
