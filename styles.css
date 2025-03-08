@@ -62,3 +62,19 @@ p
 {
     color: rgb(176, 155, 106);
 }
+
+label
+{
+    color: rgb(176, 155, 106);
+}
+
+button
+{
+    background-color:rgb(252, 230, 180);
+    color: rgb(176, 155, 106);
+}
+
+input
+{
+    background-color:rgb(252, 230, 180);
+}
