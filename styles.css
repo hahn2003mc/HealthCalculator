@@ -53,6 +53,11 @@ h1
 
 h2
 {
-    color: black;
+    color: rgb(176, 155, 106);
     text-align: center;
+}
+
+p
+{
+    color: rgb(176, 155, 106);
 }
