@@ -12,6 +12,7 @@
         <div class="boxcontainer">
             <div class="box">
                 <h2>BMR Calculator</h2>
+                <p class="info">Please enter your current weight and your current height to get an approximation for your <abbr title="The number of calories your body burns in a day without physical activity">Basal Metabolic Rate (BMR) </abbr></p>
                 <p>Please enter your information below:</p>
                 <p>Weight:</p>
                 <br>
@@ -24,11 +25,12 @@
                 <input type="text" id="height_inches">
                 <label for="height_inches">inches</label>
                 <br><br>
-                <button>Calculate</button>
+                <button id="calculate_BMR_button">Calculate</button>
             </div>
 
             <div class="box">
                 <h2>Fitness Goals</h2>
+                <p class="info">Please enter your current weight, your target weight, and the number of weeks that you want to achieve this by in order to find an approximation for how calories you should be eating in a day.</p>
                 <p>Please enter your information below:</p>
                 <p>Weight:</p>
                 <br>
@@ -43,7 +45,7 @@
                 <input type="text" id="target_time">
                 <label for="target_time">weeks</label>
                 <br><br>
-                <button>Calculate</button>
+                <button id="calculate_daily_cals_button">Calculate</button>
             </div>
         </div>
     </body>
