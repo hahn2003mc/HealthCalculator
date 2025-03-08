@@ -11,6 +11,7 @@
 
 .box
 {
+    display: block;
     background-color: lightgray;
     width: 400px;
     border: 1px solid darkgray;
