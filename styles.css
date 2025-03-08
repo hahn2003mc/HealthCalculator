@@ -4,9 +4,13 @@
     color: black;
 }
 
-.box
+.boxcontainer
 {
     display: flex;
+}
+
+.box
+{
     background-color: lightgray;
     width: 400px;
     border: 1px solid darkgray;
