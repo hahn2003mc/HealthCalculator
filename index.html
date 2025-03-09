@@ -35,8 +35,16 @@
             <div class="box">
                 <h2>Active Calories Burned</h2>
                 <p class="info">Please select your average exercise intensity and frequency to get an approximation for your active calories burned.</p>
-                <label for="intensity">Choose an intensity:</label>
-                <select name="intensity" id="intensity">
+                
+                <input type="radio" id="low intensity" name="intensity" value="Low">
+                <label for="low intensity">Low</label><br>
+                <input type="radio" id="medium intensity" name="intensity" value="Medium">
+                <label for="medium intensity">Medium</label><br>
+                <input type="radio" id="high intensity" name="intensity" value="High">
+                <label for="high intensity">High</label><br>
+
+                <label for="frequency">Choose an frequency:</label>
+                <select name="frequency" id="frequency">
                     <option value="0 times a week"></option>
                     <option value="1-2 times a week"></option>
                     <option value="3-4 times a week"></option>
