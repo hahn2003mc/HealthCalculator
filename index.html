@@ -37,33 +37,46 @@
                 <br><br>
                 <button id="calculate_BMR_button">Calculate</button>
                 <p>Result:</p>
-                <div id="result"></div>
+                <div id="result_BMR"></div>
             </div>
             
             <!-- Active Calories Burned Box -->
             <div class="box">
                 <h2>Active Calories Burned</h2>
-                <p class="info">Please select your average exercise intensity and frequency to get an approximation for your active calories burned.</p>
-                
+                <p class="info">Please enter your weight, then select your average exercise intensity, duration, and frequency to get an approximation for your active calories burned when weight training.</p>
+                <p>Weight:</p>
+                <input type="text" id="weight_2">
+                <label for="weight_2">lbs</label>
+              
                 <p>Choose an intensity:</p>
-                <input type="radio" id="low intensity" name="intensity" value="Low">
+                <input type="radio" id="intensity" name="intensity" value="Low">
                 <label for="low intensity">Low</label><br>
-                <input type="radio" id="medium intensity" name="intensity" value="Medium">
+                <input type="radio" id="intensity" name="intensity" value="Medium">
                 <label for="medium intensity">Medium</label><br>
-                <input type="radio" id="high intensity" name="intensity" value="High">
+                <input type="radio" id="intensity" name="intensity" value="High">
                 <label for="high intensity">High</label><br>
                 <p class="disclaimer">Exercise intensity is typically "how hard" exercise feels when you do it. If you are experiencing a relatively high heart rate, you are likely doing a high intensity exercise.</p>
                 <br>
 
+              <label for="duration">Choose a duration:</label>
+                <select name="duration" id="duration">
+                    <option value="10-20">10-20 minutes</option>
+                    <option value="20-30">20-30 minutes</option>
+                    <option value="30-45">30-45 minutes</option>
+                    <option value="45-60">45-60 minutes</option>
+                </select>
+                <br><br>
+              
                 <label for="frequency">Choose a frequency:</label>
                 <select name="frequency" id="frequency">
-                    <option value="0">0 times a week</option>
                     <option value="1-2">1-2 times a week</option>
                     <option value="3-4">3-4 times a week</option>
                     <option value="5-7">5-7 times a week</option>
                 </select>
                 <br><br>
-                <input type="submit" value="Submit">
+                <button id="calculate_active_cals_button">Calculate</button>
+                <p>Result:</p>
+                <div id="result_active"></div>
             </div>
 
             <!-- Future Planning Box -->

@@ -110,3 +110,10 @@ select
     background-color:rgb(252, 230, 180);
     font-family: Arial, Helvetica, sans-serif;
 }
+
+#result_BMR, #result_active
+{
+    text-align: left;
+    color: rgb(146, 129, 89);
+    font-family: Arial, Helvetica, sans-serif;
+}
