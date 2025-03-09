@@ -41,6 +41,29 @@
     margin: 10px;
     box-sizing: border-box;
 }
+.box3
+{
+    display: block;
+    border-radius: 25px;
+    border-color:rgb(146, 129, 89);
+    background-color: rgb(219, 193, 134);
+    width: 350px;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.quotationbox
+{
+    display: block;
+    border-radius: 25px;
+    border-color:rgb(146, 129, 89);
+    background-color: rgb(219, 193, 134);
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
 
 body
 {
