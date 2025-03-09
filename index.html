@@ -10,9 +10,10 @@
         <p class="introduction">This website is meant to help you track your fitness goals! When considering a change in lifestyle to better our health, we consider two major components: diet and physical activity. Here, you can estimate your BMR, set a goal for your dieting, and manage your diet which will help you meet your goal!</p>
 
         <div class="boxcontainer">
+            <!-- Passive Calories Burned Box -->
             <div class="box">
                 <h2>Passive Calories Burned</h2>
-                <p class="info">Please enter your current weight and your current height to get an approximation for your <abbr title="The number of calories your body burns in a day without physical activity">Basal Metabolic Rate (BMR) </abbr></p>
+                <p class="info">Please enter your current weight and your current height to get an approximation for your <abbr title="The number of calories your body burns in a day without physical activity">Basal Metabolic Rate (BMR)</abbr>.</p>
                 <p>Please enter your information below:</p>
                 <p>Weight:</p>
                 <br>
@@ -30,18 +31,21 @@
                 <div id="result"></div>
             </div>
             
-            <div class="box2">
+            <!-- Active Calories Burned Box -->
+            <div class="box">
                 <h2>Active Calories Burned</h2>
-                <p class="info">Please select your average exercise intensity and frequency to get an approximation for your active calories burned</p>
-                <dropdown>
-
-                </dropdown>
-                <dropdown>
-
-                </dropdown>
+                <p class="info">Please select your average exercise intensity and frequency to get an approximation for your active calories burned.</p>
+                <label for="intensity">Choose an intensity:</label>
+                <select name="intensity" id="intensity">
+                    <option value="0 times a week"></option>
+                    <option value="1-2 times a week"></option>
+                    <option value="3-4 times a week"></option>
+                    <option value="5-7 times a week"></option>
+                </select>
             </div>
 
-            <div class="box3">
+            <!-- Future Planning Box -->
+            <div class="box">
                 <h2>Future Planning</h2>
                 <p class="info">Please enter your current weight, your target weight, and the number of weeks that you want to achieve this by in order to find an approximation for how calories you should be eating in a day.</p>
                 <p>Please enter your information below:</p>
