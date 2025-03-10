@@ -96,3 +96,62 @@ document.getElementById("calculate_active_cals_button").addEventListener("click"
         document.getElementById("result_active").innerHTML = "When you weight train, your body burns approximately " + result1 + " calories every lift, and about " + result2 + " calories every week.";
       }
 });
+
+
+
+// Future Weight Loss Calculation
+document.getElementById("calculate_future_button").addEventListener("click", function()
+{
+  // get inputs
+  var current_weight = parseInt(document.getElementById("weight_current").value);
+  var target_weight = parseInt(document.getElementById("target_weight").value);
+  var target_time = parseInt(document.getElementById("target_time").value);
+
+  var result3 = Math.round(10*(current_weight-target_weight)/target_time)/10;
+  console.log(result3);
+
+  
+  if (isNaN(result3))
+      {
+        document.getElementById("result_future").innerHTML = "Sorry, I didn't get that. Are you sure you have filled in all fields?";
+      }
+  else
+      {
+        
+        if (result3 < 0.5)
+        {
+        document.getElementById("result_future").innerHTML = "To lose " + (current_weight-target_weight)+ " pounds in " + target_time + " weeks, you need to lose approximately " + result3 + " pounds per week. This is very feasible, and you should be aiming to have around a 250 calorie deficit every day to achieve this.";
+        }
+        else if (result3 < 1)
+        {
+        document.getElementById("result_future").innerHTML = "To lose " + (current_weight-target_weight)+ " pounds in " + target_time + " weeks, you need to lose approximately " + result3 + " pounds per week. This is somewhat feasible, and you should be aiming to have around a 500 calorie deficit every day to achieve this.";
+        }
+        else if (result3 == 1)
+        {
+        document.getElementById("result_future").innerHTML = "To lose " + (current_weight-target_weight)+ " pounds in " + target_time + " weeks, you need to lose approximately " + result3 + " pound per week. This is somewhat feasible, and you should be aiming to have around a 500 calorie deficit every day to achieve this.";
+        }
+        else
+        {
+        document.getElementById("result_future").innerHTML = "To lose " + (current_weight-target_weight)+ " pounds in " + target_time + " weeks, you need to lose approximately " + result3 + " pounds per week. This is not very feasible, since you should be aiming to have more than a 500 calorie deficit every day to achieve this.";
+        }
+      
+      }
+});
+
+
+
+// Random quote generator
+// defining the list of quotes
+const quotelist = ["It does not matter how slowly you go as long as you do not stop. -Confucius", "It always seems impossible until it's done. -Nelson Mandela", "Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time. -Thomas A. Edison", "Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy. -Norman Vincent Peale", "Start where you are. Use what you have. Do what you can. -Arthur Ashe"];
+
+// randomly choose a quote and put it in the quote container in the DOM as a <p> element
+function generate_quote()
+{
+  document.getElementById("quote_container").innerHTML = ("<p>" + quotelist[Math.floor(Math.random()*quotelist.length)] + "</p>");
+}
+
+// randomly pick a motivational quote on page load
+window.onload = function()
+{
+  generate_quote();
+}

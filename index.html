@@ -86,7 +86,7 @@
                 <p>Please enter your information below:</p>
                 <p>Weight:</p>
                 <br>
-                <input type="text" id="weight">
+                <input type="text" id="weight_current">
                 <label for="weight">lbs</label>
                 <p>Target Weight:</p>
                 <br>
@@ -97,7 +97,9 @@
                 <input type="text" id="target_time">
                 <label for="target_time">weeks</label>
                 <br><br>
-                <button id="calculate_daily_cals_button">Calculate</button>
+                <button id="calculate_future_button">Calculate</button>
+                <p>Result:</p>
+                <div id="result_future"></div>
             </div>        
         </div>
 
@@ -105,8 +107,7 @@
 
         <br>
 
-        <div class="quotationbox">
-            <p>"Here is a quote." -this guy</p>
+        <div class="quotationbox" id="quote_container">
         </div>
     </body>
 </html>
