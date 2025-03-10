@@ -38,8 +38,21 @@
     box-sizing: border-box;
 }
 
+.bigbox
+{
+    border-radius: 25px;
+    border-color:rgb(146, 129, 89);
+    display: block;
+    background-color: rgb(219, 193, 134);
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
 .quotationbox
 {
+    text-align: center;
     display: block;
     border-radius: 25px;
     border-color:rgb(146, 129, 89);
@@ -71,6 +84,14 @@ h2
     font-size: 30px;
 }
 
+h3
+{
+    color: rgb(146, 129, 89);
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
 p
 {
     color: rgb(146, 129, 89);
@@ -95,6 +116,19 @@ input
     background-color:rgb(252, 230, 180);
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.food_input
+{
+    background-color:rgb(252, 230, 180);
+    width: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.food_input_label
+{
+  margin-right: 20px;
+}
+
 
 img
 {
