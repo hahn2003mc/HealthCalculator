@@ -111,261 +111,56 @@
       
       <div class = "bigbox">
         <h3>Meal Prep Calculator</h3>
+        <p>This section is used to help you make meals for the day given some common choices of food. The macros in each food item are based on the recommended daily serving for each item.<p>
           <label for="protein">Day 1: Choose a protein:</label>
-                <select name="protein1" id="protein1">
+                <select name="protein" id="protein">
                     <option value="Chicken">Chicken</option>
-                    <option value="Beef">Beef</option>
+                    <option value="Steak">Steak</option>
                     <option value="Pork">Pork</option>
                 </select>
-                <input class="food_input" type="protein_size_text" id="protein_size_text1">
-                <label class="food_input_label" for="protein_size_text">g</label>
           
           <label for="carb">Choose a carb:</label>
-                <select name="carb1" id="carb1">
+                <select name="carb" id="carb">
                     <option value="Rice">Rice</option>
                     <option value="Bread">Bread</option>
                     <option value="Bagel">Bagel</option>
                 </select>
-                <input class="food_input" type="carb_size_text" id="carb_size_text1">
-                <label class="food_input_label" for="carb_size_text">g</label>
-          
           
           <label for="vegetable">Choose a vegetable:</label>
-                <select name="vegetable1" id="vegetable1">
+                <select name="vegetable" id="vegetable">
                     <option value="Broccoli">Broccoli</option>
                     <option value="Lettuce">Lettuce</option>
                     <option value="Carrot">Carrot</option>
                 </select>
-                <input class="food_input" type="vegetable_size_text" id="vegetable_size_text1">
-                <label class="food_input_label" for="vegetable_size_text">g</label>
         
         <label for="fat">Choose a fat:</label>
-                <select name="fat1" id="fat1">
+                <select name="fat" id="fat">
                     <option value="Butter">Butter</option>
                     <option value="Olive oil">Olive oil</option>
                 </select>
-                <input class="food_input" type="fat_size_text" id="fat_size_text1">
-                <label class="food_input_label" for="fat_size_text">g</label>
-        <br>
-        <label for="protein">Day 2: Choose a protein:</label>
-                <select name="protein2" id="protein2">
-                    <option value="Chicken">Chicken</option>
-                    <option value="Beef">Beef</option>
-                    <option value="Pork">Pork</option>
-                </select>
-                <input class="food_input" type="protein_size_text" id="protein_size_text2">
-                <label class="food_input_label" for="protein_size_text">g</label>
+        <br><br>
+        <button id="calculate_weekly_totals_button">Calculate</button>
+        <br><br>
+                <p>Here are your results:</p>
+                <div id="result_planner"></div>
+        <table>
+          <tr>
+            <th>Protein (g)</th>
+            <th>Carbs (g)</th>
+            <th>Fat (g)</th>
+            <th>Fiber (g)</th>
+            <th>Sodium (mg)</th>
+            <th>Calories</th>
+          </tr>
+          <tr>
+          <td id="cell1">-</td>
+          <td id="cell2">-</td>
+          <td id="cell3">-</td>
+          <td id="cell4">-</td>
+          <td id="cell5">-</td>
+          <td id="cell6">-</td>
+          </tr>
           
-          <label for="carb">Choose a carb:</label>
-                <select name="carb2" id="carb2">
-                    <option value="Rice">Rice</option>
-                    <option value="Bread">Bread</option>
-                    <option value="Bagel">Bagel</option>
-                </select>
-                <input class="food_input" type="carb_size_text" id="carb_size_text2">
-                <label class="food_input_label" for="carb_size_text">g</label>
-          
-          
-          <label for="vegetable">Choose a vegetable:</label>
-                <select name="vegetable2" id="vegetable2">
-                    <option value="Broccoli">Broccoli</option>
-                    <option value="Lettuce">Lettuce</option>
-                    <option value="Carrot">Carrot</option>
-                </select>
-                <input class="food_input" type="vegetable_size_text" id="vegetable_size_text2">
-                <label class="food_input_label" for="vegetable_size_text">g</label>
-        
-        <label for="fat">Choose a fat:</label>
-                <select name="fat2" id="fat2">
-                    <option value="Butter">Butter</option>
-                    <option value="Olive oil">Olive oil</option>
-                </select>
-                <input class="food_input" type="fat_size_text" id="fat_size_text2">
-                <label class="food_input_label" for="fat_size_text">g</label>
-        <br>
-        <label for="protein">Day 3: Choose a protein:</label>
-                <select name="protein3" id="protein3">
-                    <option value="Chicken">Chicken</option>
-                    <option value="Beef">Beef</option>
-                    <option value="Pork">Pork</option>
-                </select>
-                <input class="food_input" type="protein_size_text" id="protein_size_text3">
-                <label class="food_input_label" for="protein_size_text">g</label>
-          
-          <label for="carb">Choose a carb:</label>
-                <select name="carb3" id="carb3">
-                    <option value="Rice">Rice</option>
-                    <option value="Bread">Bread</option>
-                    <option value="Bagel">Bagel</option>
-                </select>
-                <input class="food_input" type="carb_size_text" id="carb_size_text3">
-                <label class="food_input_label" for="carb_size_text">g</label>
-          
-          
-          <label for="vegetable">Choose a vegetable:</label>
-                <select name="vegetable3" id="vegetable3">
-                    <option value="Broccoli">Broccoli</option>
-                    <option value="Lettuce">Lettuce</option>
-                    <option value="Carrot">Carrot</option>
-                </select>
-                <input class="food_input" type="vegetable_size_text" id="vegetable_size_text3">
-                <label class="food_input_label" for="vegetable_size_text">g</label>
-        
-        <label for="fat">Choose a fat:</label>
-                <select name="fat3" id="fat3">
-                    <option value="Butter">Butter</option>
-                    <option value="Olive oil">Olive oil</option>
-                </select>
-                <input class="food_input" type="fat_size_text" id="fat_size_text3">
-                <label class="food_input_label" for="fat_size_text">g</label>
-        <br>
-        <label for="protein">Day 4: Choose a protein:</label>
-                <select name="protein4" id="protein4">
-                    <option value="Chicken">Chicken</option>
-                    <option value="Beef">Beef</option>
-                    <option value="Pork">Pork</option>
-                </select>
-                <input class="food_input" type="protein_size_text" id="protein_size_text4">
-                <label class="food_input_label" for="protein_size_text">g</label>
-          
-          <label for="carb">Choose a carb:</label>
-                <select name="carb4" id="carb4">
-                    <option value="Rice">Rice</option>
-                    <option value="Bread">Bread</option>
-                    <option value="Bagel">Bagel</option>
-                </select>
-                <input class="food_input" type="carb_size_text" id="carb_size_text4">
-                <label class="food_input_label" for="carb_size_text">g</label>
-          
-          
-          <label for="vegetable">Choose a vegetable:</label>
-                <select name="vegetable4" id="vegetable4">
-                    <option value="Broccoli">Broccoli</option>
-                    <option value="Lettuce">Lettuce</option>
-                    <option value="Carrot">Carrot</option>
-                </select>
-                <input class="food_input" type="vegetable_size_text" id="vegetable_size_text4">
-                <label class="food_input_label" for="vegetable_size_text">g</label>
-        
-        <label for="fat">Choose a fat:</label>
-                <select name="fat4" id="fat4">
-                    <option value="Butter">Butter</option>
-                    <option value="Olive oil">Olive oil</option>
-                </select>
-                <input class="food_input" type="fat_size_text" id="fat_size_text4">
-                <label class="food_input_label" for="fat_size_text">g</label>
-        <br>
-        <label for="protein">Day 5: Choose a protein:</label>
-                <select name="protein5" id="protein5">
-                    <option value="Chicken">Chicken</option>
-                    <option value="Beef">Beef</option>
-                    <option value="Pork">Pork</option>
-                </select>
-                <input class="food_input" type="protein_size_text" id="protein_size_text5">
-                <label class="food_input_label" for="protein_size_text">g</label>
-          
-          <label for="carb">Choose a carb:</label>
-                <select name="carb5" id="carb5">
-                    <option value="Rice">Rice</option>
-                    <option value="Bread">Bread</option>
-                    <option value="Bagel">Bagel</option>
-                </select>
-                <input class="food_input" type="carb_size_text" id="carb_size_text5">
-                <label class="food_input_label" for="carb_size_text">g</label>
-          
-          
-          <label for="vegetable">Choose a vegetable:</label>
-                <select name="vegetable5" id="vegetable5">
-                    <option value="Broccoli">Broccoli</option>
-                    <option value="Lettuce">Lettuce</option>
-                    <option value="Carrot">Carrot</option>
-                </select>
-                <input class="food_input" type="vegetable_size_text" id="vegetable_size_text5">
-                <label class="food_input_label" for="vegetable_size_text">g</label>
-        
-        <label for="fat">Choose a fat:</label>
-                <select name="fat5" id="fat5">
-                    <option value="Butter">Butter</option>
-                    <option value="Olive oil">Olive oil</option>
-                </select>
-                <input class="food_input" type="fat_size_text" id="fat_size_text5">
-                <label class="food_input_label" for="fat_size_text">g</label>
-        <br>
-        <label for="protein">Day 6: Choose a protein:</label>
-                <select name="protein6" id="protein6">
-                    <option value="Chicken">Chicken</option>
-                    <option value="Beef">Beef</option>
-                    <option value="Pork">Pork</option>
-                </select>
-                <input class="food_input" type="protein_size_text" id="protein_size_text6">
-                <label class="food_input_label" for="protein_size_text">g</label>
-          
-          <label for="carb">Choose a carb:</label>
-                <select name="carb6" id="carb6">
-                    <option value="Rice">Rice</option>
-                    <option value="Bread">Bread</option>
-                    <option value="Bagel">Bagel</option>
-                </select>
-                <input class="food_input" type="carb_size_text" id="carb_size_text6">
-                <label class="food_input_label" for="carb_size_text">g</label>
-          
-          
-          <label for="vegetable">Choose a vegetable:</label>
-                <select name="vegetable6" id="vegetable6">
-                    <option value="Broccoli">Broccoli</option>
-                    <option value="Lettuce">Lettuce</option>
-                    <option value="Carrot">Carrot</option>
-                </select>
-                <input class="food_input" type="vegetable_size_text" id="vegetable_size_text6">
-                <label class="food_input_label" for="vegetable_size_text">g</label>
-        
-        <label for="fat">Choose a fat:</label>
-                <select name="fat6" id="fat6">
-                    <option value="Butter">Butter</option>
-                    <option value="Olive oil">Olive oil</option>
-                </select>
-                <input class="food_input" type="fat_size_text" id="fat_size_text6">
-                <label class="food_input_label" for="fat_size_text">g</label>
-        <br>
-        <label for="protein">Day 7: Choose a protein:</label>
-                <select name="protein7" id="protein7">
-                    <option value="Chicken">Chicken</option>
-                    <option value="Beef">Beef</option>
-                    <option value="Pork">Pork</option>
-                </select>
-                <input class="food_input" type="protein_size_text" id="protein_size_text7">
-                <label class="food_input_label" for="protein_size_text">g</label>
-          
-          <label for="carb">Choose a carb:</label>
-                <select name="carb7" id="carb7">
-                    <option value="Rice">Rice</option>
-                    <option value="Bread">Bread</option>
-                    <option value="Bagel">Bagel</option>
-                </select>
-                <input class="food_input" type="carb_size_text" id="carb_size_text7">
-                <label class="food_input_label" for="carb_size_text">g</label>
-          
-          
-          <label for="vegetable">Choose a vegetable:</label>
-                <select name="vegetable7" id="vegetable7">
-                    <option value="Broccoli">Broccoli</option>
-                    <option value="Lettuce">Lettuce</option>
-                    <option value="Carrot">Carrot</option>
-                </select>
-                <input class="food_input" type="vegetable_size_text" id="vegetable_size_text7">
-                <label class="food_input_label" for="vegetable_size_text">g</label>
-        
-        <label for="fat">Choose a fat:</label>
-                <select name="fat7" id="fat7">
-                    <option value="Butter">Butter</option>
-                    <option value="Olive oil">Olive oil</option>
-                </select>
-                <input class="food_input" type="fat_size_text" id="fat_size_text7">
-                <label class="food_input_label" for="fat_size_text">g</label>
-        
-                <br><br>
-                <button id="calculate_weekly_totals_button">Calculate</button>
-                <p>Weekly Totals:</p>
-                <div id="result_future"></div>
+        </table>
     </body>
 </html>
