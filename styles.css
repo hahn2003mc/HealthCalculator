@@ -1,13 +1,13 @@
 .info
 {
     font-size: 16px;
-    color: rgb(146, 129, 89);
+    color: rgb(25, 25, 120);
 }
 
 .introduction
 {
     font-size: 22px;
-    color: rgb(193, 168, 112);
+    color: rgb(25, 25, 120);
     padding: 2px;
 }
 
@@ -15,7 +15,7 @@
 {
     text-align: center;
     font-size: 12px;
-    color: rgb(146, 129, 89);
+    color: rgb(25, 25, 120);
 }
 
 .boxcontainer
@@ -29,9 +29,9 @@
 .box
 {
     border-radius: 25px;
-    border-color:rgb(146, 129, 89);
+    border-color: rgb(25, 25, 120);
     display: block;
-    background-color: rgb(219, 193, 134);
+    background-color: rgb(150, 200, 255);
     width: 350px;
     padding: 10px;
     margin: 10px;
@@ -41,9 +41,9 @@
 .bigbox
 {
     border-radius: 25px;
-    border-color:rgb(146, 129, 89);
+    border-color: rgb(25, 25, 120);
     display: block;
-    background-color: rgb(219, 193, 134);
+    background-color: rgb(150, 200, 255);
     width: 100%;
     padding: 10px;
     margin: 10px;
@@ -55,8 +55,8 @@
     text-align: center;
     display: block;
     border-radius: 25px;
-    border-color:rgb(146, 129, 89);
-    background-color: rgb(219, 193, 134);
+    border-color: rgb(25, 25, 120);
+    background-color: rgb(150, 200, 255);
     width: 100%;
     padding: 10px;
     margin: 10px;
@@ -65,12 +65,12 @@
 
 body
 {
-    background-color:rgb(252, 230, 180);
+    background-color: rgb(230, 245, 255);
 }
 
 h1
 {
-    color: rgb(146, 129, 89);
+    color: rgb(25, 25, 120);
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 45px;
@@ -78,7 +78,7 @@ h1
 
 h2
 {
-    color: rgb(146, 129, 89);
+    color: rgb(25, 25, 120);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
@@ -86,7 +86,7 @@ h2
 
 h3
 {
-    color: rgb(146, 129, 89);
+    color: rgb(25, 25, 120);
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
@@ -94,32 +94,32 @@ h3
 
 p
 {
-    color: rgb(146, 129, 89);
+    color: rgb(25, 25, 120);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 label
 {
-    color: rgb(146, 129, 89);
+    color: rgb(25, 25, 120);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 button
 {
-    background-color:rgb(252, 230, 180);
-    color: rgb(146, 129, 89);
+    background-color: rgb(220, 235, 255);
+    color: rgb(25, 25, 120);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 input
 {
-    background-color:rgb(252, 230, 180);
+    background-color: rgb(220, 235, 255);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .food_input
 {
-    background-color:rgb(252, 230, 180);
+    background-color: rgb(220, 235, 255);
     width: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -141,13 +141,13 @@ img
 
 select
 {
-    background-color:rgb(252, 230, 180);
+    background-color: rgb(220, 235, 255);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #result_BMR, #result_active, #result_future
 {
     text-align: left;
-    color: rgb(146, 129, 89);
+    color: rgb(25, 25, 120);
     font-family: Arial, Helvetica, sans-serif;
 }

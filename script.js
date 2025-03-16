@@ -155,3 +155,94 @@ window.onload = function()
 {
   generate_quote();
 }
+
+document.getElementById("calculate_weekly_totals_button").addEventListener("click", function()
+{
+  // get the values for the food types
+  var protein1 = (document.getElementById("protein1").value);
+  if (protein1 == "Chicken")
+    { // proportion of chicken (per gram) that is protein
+      protein1 = 44/200;
+    }
+  var protein2 = (document.getElementById("protein2").value);
+  var protein3 = (document.getElementById("protein3").value);
+  var protein4 = (document.getElementById("protein4").value);
+  var protein5 = (document.getElementById("protein5").value);
+  var protein6 = (document.getElementById("protein6").value);
+  var protein7 = (document.getElementById("protein7").value);
+  
+  var carb1 = (document.getElementById("carb1").value);
+  if (carb1 == "Rice")
+    {
+      carb1 == 45/200;
+    }
+  var carb2 = (document.getElementById("carb2").value);
+  var carb3 = (document.getElementById("carb3").value);
+  var carb4 = (document.getElementById("carb4").value);
+  var carb5 = (document.getElementById("carb5").value);
+  var carb6 = (document.getElementById("carb6").value);
+  var carb7 = (document.getElementById("carb7").value);
+  
+  var vegetable1 = (document.getElementById("vegetable1").value);
+  if (vegetable1 == "Broccoli")
+    {
+      vegetable1 = 2.4/120;
+    }
+  var vegetable2 = (document.getElementById("vegetable2").value);
+  var vegetable3 = (document.getElementById("vegetable3").value);
+  var vegetable4 = (document.getElementById("vegetable4").value);
+  var vegetable5 = (document.getElementById("vegetable5").value);
+  var vegetable6 = (document.getElementById("vegetable6").value);
+  var vegetable7 = (document.getElementById("vegetable7").value);
+  
+  var fat1 = (document.getElementById("fat1").value);
+  if (fat1 == "Butter")
+    {
+      fat1 = 92/113;
+    }
+  var fat2 = (document.getElementById("fat2").value);
+  var fat3 = (document.getElementById("fat3").value);
+  var fat4 = (document.getElementById("fat4").value);
+  var fat5 = (document.getElementById("fat5").value);
+  var fat6 = (document.getElementById("fat6").value);
+  var fat7 = (document.getElementById("fat7").value);
+  
+  // get the values for the food amounts
+  var protein_amount1 = (document.getElementById("protein_size_text1").value);
+  var protein_amount2 = (document.getElementById("protein_size_text2").value);
+  var protein_amount3 = (document.getElementById("protein_size_text3").value);
+  var protein_amount4 = (document.getElementById("protein_size_text4").value);
+  var protein_amount5 = (document.getElementById("protein_size_text5").value);
+  var protein_amount6 = (document.getElementById("protein_size_text6").value);
+  var protein_amount7 = (document.getElementById("protein_size_text7").value);
+
+  var carb_amount_1 = (document.getElementById("carb_amount_1").value);
+  var carb_amount_2 = (document.getElementById("carb_amount_2").value);
+  var carb_amount_3 = (document.getElementById("carb_amount_3").value);
+  var carb_amount_4 = (document.getElementById("carb_amount_4").value);
+  var carb_amount_5 = (document.getElementById("carb_amount_5").value);
+  var carb_amount_6 = (document.getElementById("carb_amount_6").value);
+  var carb_amount_7 = (document.getElementById("carb_amount_7").value);
+  
+  var vegetable_amount_1 = (document.getElementById("vegetable_amount_1").value);
+  var vegetable_amount_2 = (document.getElementById("vegetable_amount_2").value);
+  var vegetable_amount_3 = (document.getElementById("vegetable_amount_3").value);
+  var vegetable_amount_4 = (document.getElementById("vegetable_amount_4").value);
+  var vegetable_amount_5 = (document.getElementById("vegetable_amount_5").value);
+  var vegetable_amount_6 = (document.getElementById("vegetable_amount_6").value);
+  var vegetable_amount_7 = (document.getElementById("vegetable_amount_7").value);
+  
+  var fat_amount_1 = (document.getElementById("fat_amount_1").value);
+  var fat_amount_2 = (document.getElementById("fat_amount_2").value);
+  var fat_amount_3 = (document.getElementById("fat_amount_3").value);
+  var fat_amount_4 = (document.getElementById("fat_amount_4").value);
+  var fat_amount_5 = (document.getElementById("fat_amount_5").value);
+  var fat_amount_6 = (document.getElementById("fat_amount_6").value);
+  var fat_amount_7 = (document.getElementById("fat_amount_7").value);
+  
+  // macro metrics
+  // ??????????? also need calories ???????????????
+  var day1_total = (protein1*protein_amount_1) + (carb1*carb_amount_1) + (vegetable1*vegetable_amount1) + (fat1*fat_amount1);
+  // ????????????????????????
+  
+});
