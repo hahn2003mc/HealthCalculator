@@ -38,9 +38,12 @@ document.getElementById("calculate_BMR_button").addEventListener("click", functi
 // Active Calories Burned Calculation
 document.getElementById("calculate_active_cals_button").addEventListener("click", function()
 {
+  var result1 = 0;
+  var result2 = 0;
   // get inputs and standardize values
-  var weight = Math.round(parseInt(document.getElementById("weight_2").value, 10)/100);
-  var intensity = document.getElementById("intensity").value;
+  var weight = Math.round(parseInt(document.getElementById("weight_2").value, 10)/10)/10;
+  var intensity = (document.querySelector('input[name="intensity"]:checked')).value;
+  console.log(weight);
   if (intensity == "Low")
     {
       intensity = 0.5;
@@ -58,17 +61,17 @@ document.getElementById("calculate_active_cals_button").addEventListener("click"
     {
       duration = 15;
     }
-  if (duration == "20-30")
+  else if (duration == "20-30")
     {
       duration = 25;
     }
-  if (duration == "30-45")
+  else if (duration == "30-45")
     {
       duration = 37.5;
     }
   else
     {
-      
+      duration = 52.5;
     }
   var frequency = document.getElementById("frequency").value;
   if (frequency == "1-2")
@@ -84,8 +87,8 @@ document.getElementById("calculate_active_cals_button").addEventListener("click"
       frequency = 6;
     }
   
-  var result1 = Math.round(weight*intensity*duration*4.8);
-  var result2 = Math.round(result1*frequency);
+  result1 = Math.round(weight*intensity*duration*4.8);
+  result2 = Math.round(result1*frequency);
   
   if (isNaN(result2))
       {
@@ -106,10 +109,9 @@ document.getElementById("calculate_future_button").addEventListener("click", fun
   var current_weight = parseInt(document.getElementById("weight_current").value);
   var target_weight = parseInt(document.getElementById("target_weight").value);
   var target_time = parseInt(document.getElementById("target_time").value);
-
+  
   var result3 = Math.round(10*(current_weight-target_weight)/target_time)/10;
   console.log(result3);
-
   
   if (isNaN(result3))
       {
@@ -117,24 +119,56 @@ document.getElementById("calculate_future_button").addEventListener("click", fun
       }
   else
       {
-        
-        if (result3 < 0.5)
+        if (result3 == 0)
         {
-        document.getElementById("result_future").innerHTML = "To lose " + (current_weight-target_weight)+ " pounds in " + target_time + " weeks, you need to lose approximately " + result3 + " pounds per week. This is very feasible, and you should be aiming to have around a 250 calorie deficit every day to achieve this.";
-        }
-        else if (result3 < 1)
-        {
-        document.getElementById("result_future").innerHTML = "To lose " + (current_weight-target_weight)+ " pounds in " + target_time + " weeks, you need to lose approximately " + result3 + " pounds per week. This is somewhat feasible, and you should be aiming to have around a 500 calorie deficit every day to achieve this.";
-        }
-        else if (result3 == 1)
-        {
-        document.getElementById("result_future").innerHTML = "To lose " + (current_weight-target_weight)+ " pounds in " + target_time + " weeks, you need to lose approximately " + result3 + " pound per week. This is somewhat feasible, and you should be aiming to have around a 500 calorie deficit every day to achieve this.";
+        document.getElementById("result_future").innerHTML = "I am happy that you are at your target weight already! Nice job.";
         }
         else
-        {
-        document.getElementById("result_future").innerHTML = "To lose " + (current_weight-target_weight)+ " pounds in " + target_time + " weeks, you need to lose approximately " + result3 + " pounds per week. This is not very feasible, since you should be aiming to have more than a 500 calorie deficit every day to achieve this.";
-        }
-      
+          {
+            // person wants to lose weight
+            if ((current_weight-target_weight) > 0)
+              {
+                if (result3 <= 0.5)
+                {
+                document.getElementById("result_future").innerHTML = "To lose " + (current_weight-target_weight)+ " pounds in " + target_time + " weeks, you need to lose approximately " + result3 + " pounds per week. This is very feasible, and you should be aiming to have around a 250 calorie deficit every day to achieve this.";
+                }
+                else if (result3 < 1)
+                {
+                document.getElementById("result_future").innerHTML = "To lose " + (current_weight-target_weight)+ " pounds in " + target_time + " weeks, you need to lose approximately " + result3 + " pounds per week. This is somewhat feasible, and you should be aiming to have around a 500 calorie deficit every day to achieve this.";
+                }
+                else if (result3 == 1)
+                {
+                document.getElementById("result_future").innerHTML = "To lose " + (current_weight-target_weight)+ " pounds in " + target_time + " weeks, you need to lose approximately " + result3 + " pound per week. This is somewhat feasible, and you should be aiming to have around a 500 calorie deficit every day to achieve this.";
+                }
+                else if (result3 > 1)
+                {
+                document.getElementById("result_future").innerHTML = "To lose " + (current_weight-target_weight)+ " pounds in " + target_time + " weeks, you need to lose approximately " + result3 + " pounds per week. This is not very feasible, since you should be aiming to have more than a 500 calorie deficit every day to achieve this.";
+                }
+                else // result is too small
+                  {
+                    document.getElementById("result_future").innerHTML = "The amount of weight you would have to lose is less than 0.5 pounds per week. Try something more ambitious!";
+                  }
+              }
+            else // person wants to gain weight
+              {
+                if (result3 < -1)
+                  {
+                  document.getElementById("result_future").innerHTML = "To gain " + (target_weight-current_weight)+ " pounds in " + target_time + " weeks, you need to gain approximately " + (-1)*result3 + " pounds per week. This is not very feasible, since you should be aiming to have more than a 500 calorie surplus every day to achieve this.";
+                  }
+                else if (result3 >= -0.5)
+                  {
+                  document.getElementById("result_future").innerHTML = "To gain " + (target_weight-current_weight)+ " pounds in " + target_time + " weeks, you need to gain approximately " + (-1)*result3 + " pounds per week. This is very feasible, and you should be aiming to have around a 250 calorie surplus every day to achieve this.";
+                  }
+                else if (result3 >= -1)
+                  {
+                    document.getElementById("result_future").innerHTML = "To gain " + (target_weight-current_weight)+ " pounds in " + target_time + " weeks, you need to gain approximately " + (-1)*result3 + " pound per week. This is somewhat feasible, and you should be aiming to have around a 500 calorie surplus every day to achieve this.";
+                  }
+                else // result is too small
+                  {
+                    document.getElementById("result_future").innerHTML = "The amount of weight you would have to gain is less than 0.5 pounds per week. Try something more ambitious!";
+                  }
+              }
+          }
       }
 });
 
